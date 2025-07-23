@@ -34,3 +34,23 @@ Untuk menjalankan aplikasi Flask secara otomatis di latar belakang, termasuk saa
    sudo systemctl enable flaskapp.service
    sudo systemctl start flaskapp.service
    ```
+6. Cek status untuk memastikan service berjalan dengan baik:
+   ```bash
+   sudo systemctl status flaskapp.service
+   ```
+
+## Langkah Terakhir
+Salin ip public dan tempel di browser, jangan lupa tambahkan :5000 di belakang
+
+## Hasil Akhir
+Setelah mengikuti langkah di atas, aplikasi Flask akan:
+Berjalan di latar belakang (background)
+Otomatis menyala ulang jika terjadi crash
+Tetap berjalan secara otomatis setiap kali server direboot
+Kamu tidak perlu menjalankan ulang aplikasi secara manual setiap kali login ke server!
+
+## Otomatisasi
+Kalau kamu reboot server sekarang (sudo reboot), aplikasi Flask akan tetap berjalan tanpa kamu harus menjalankannya lagi. Kamu hanya perlu cek statusnya:
+```bash
+   sudo systemctl status flaskapp.service
+```
